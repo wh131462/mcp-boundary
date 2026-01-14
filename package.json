@@ -41,7 +41,8 @@
   },
   "author": {
     "email": "hao131462@qq.com",
-    "name": "EternalHeart"
+    "name": "EternalHeart",
+    "url": "https://github.com/wh131462"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
