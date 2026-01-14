@@ -1,10 +1,10 @@
 {
-  "name": "mcp-custom",
+  "name": "@eternalheart/mcp-boundary",
   "version": "1.0.0",
-  "description": "A custom MCP server",
+  "description": "Boundary MCP - 决策思考引擎，暴露现实结构而非给出建议",
   "type": "module",
   "bin": {
-    "mcp-custom": "./dist/index.js"
+    "mcp-boundary": "./dist/index.js"
   },
   "main": "./dist/index.js",
   "files": [
@@ -13,14 +13,36 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts",
+    "clean": "rm -rf dist",
+    "rebuild": "npm run clean && npm run build",
     "inspect": "npx @modelcontextprotocol/inspector node dist/index.js",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run rebuild",
+    "release": "npm run rebuild && npm publish --access public --registry https://registry.npmjs.com",
+    "release:patch": "npm version patch && npm run release",
+    "release:minor": "npm version minor && npm run release",
+    "release:major": "npm version major && npm run release"
   },
   "keywords": [
     "mcp",
-    "model-context-protocol"
+    "model-context-protocol",
+    "boundary",
+    "decision-making",
+    "strategy",
+    "cognitive-bias"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wh131462/mcp-boundary.git"
+  },
+  "homepage": "https://github.com/wh131462/mcp-boundary#readme",
+  "bugs": {
+    "url": "https://github.com/wh131462/mcp-boundary/issues"
+  },
+  "author": {
+    "email": "hao131462@qq.com",
+    "name": "EternalHeart"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "zod": "^3.23.0"
