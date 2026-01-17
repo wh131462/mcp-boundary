@@ -140,7 +140,7 @@ npm run build
 claude mcp add boundary -- npx @eternalheart/mcp-boundary
 ```
 
-或手动编辑配置文件 `~/.claude/claude_desktop_config.json`：
+或手动编辑配置文件 `~/.claude.json`：
 
 ```json
 {
